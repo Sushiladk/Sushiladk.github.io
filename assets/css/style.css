@@ -222,13 +222,12 @@ h6 {
   left: 0;
 }
 
+/* For larger desktop screens */
 #hero {
   width: 100%;
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  background-position: center top; /* Adjust the background image position */
 }
 
 #hero:before {
@@ -270,13 +269,14 @@ h6 {
   border-bottom: 3px solid #149ddd;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-}
-
+/* For smaller mobile screens */
 @media (max-width: 768px) {
+  #hero {
+    background: url("../img/hero-bg.jpg") center center; /* Use the same image for mobile view */
+    background-size: cover;
+    height: 50vh; /* Adjust the height to your preference */
+  }
+
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -417,7 +417,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
