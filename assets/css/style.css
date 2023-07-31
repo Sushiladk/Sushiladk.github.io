@@ -227,6 +227,8 @@ h6 {
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Optional, keeps the background fixed while scrolling */
 }
 
 #hero:before {
