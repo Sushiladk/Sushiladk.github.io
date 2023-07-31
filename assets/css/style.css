@@ -736,8 +736,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
+/* Testimonials Section */
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
@@ -750,44 +749,49 @@ section {
   margin-bottom: 20px;
 }
 
+/* Responsive Images */
 .testimonials .testimonial-item .testimonial-img {
-  width: 400px; /* change the width to your desired size */
-  height: 400px;
+  width: 100%; /* or use max-width: 100% */
+  height: auto;
   object-fit: cover;
   image-rendering: crisp-edges;
 }
 
-
 .testimonials .testimonial-item h3 {
-  font-size: 18px;
+  font-size: 24px; /* Adjust the size as needed */
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: #111;
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 16px; /* Adjust the size as needed */
   color: #999;
   margin: 0;
 }
 
+/* Improved Quote Icon Positioning */
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
   color: #c3e8fa;
   font-size: 26px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
+  left: 10px;
 }
 
 .testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
+  right: 10px;
+}
+
+/* Adjust Testimonial Item Padding */
+.testimonials .testimonial-item {
+  padding: 10px; /* Adjust the padding as needed */
+  margin-bottom: 20px;
 }
 
 .testimonials .testimonial-item p {
@@ -798,7 +802,8 @@ section {
   position: relative;
   margin-bottom: 35px;
   border-radius: 6px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  /* Reduced Box Shadow */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
 }
 
 .testimonials .testimonial-item p::after {
@@ -813,22 +818,37 @@ section {
   left: calc(50% - 20px);
 }
 
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
+/* Media Queries for Responsiveness */
+
+/* For larger desktop screens */
+@media (min-width: 1200px) {
+  /* Add styles for larger screens here */
+  .testimonials .testimonial-item {
+    padding: 20px; /* Adjust the padding as needed */
+  }
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #149ddd;
+/* For tablet screens */
+@media (max-width: 1199px) {
+  /* Add styles for tablet screens here */
+  .testimonials .testimonial-item {
+    padding: 15px; /* Adjust the padding as needed */
+  }
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+/* For mobile screens */
+@media (max-width: 767px) {
+  /* Add styles for mobile screens here */
+  .testimonials .testimonial-item {
+    padding: 10px; /* Adjust the padding as needed */
+  }
+  /* Hide the quote icons on mobile for better readability */
+  .testimonials .testimonial-item .quote-icon-left,
+  .testimonials .testimonial-item .quote-icon-right {
+    display: none;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -1104,72 +1124,4 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
-}
-/* For larger desktop screens */
-@media (min-width: 1200px) {
-  /* Add your styles here for larger screens */
-  #header {
-    width: 300px; /* Example: Adjust the header width for larger screens */
-  }
-
-  /* Add other styles for larger screens here */
-  #main {
-    margin-left: 320px; /* Example: Increase the margin for main content on larger screens */
-  }
-
-  .portfolio .portfolio-item {
-    width: calc(33.33% - 30px); /* Example: Adjust portfolio item width for larger screens */
-  }
-
-  .section-title h2 {
-    font-size: 40px; /* Example: Increase the font size for section titles on larger screens */
-  }
-
-  /* Add any other larger screen-specific styles here */
-}
-
-/* For tablet screens */
-@media (max-width: 1199px) {
-  /* Add your styles here for tablet screens */
-  #header {
-    width: 250px; /* Example: Adjust the header width for tablets */
-  }
-
-  /* Add other styles for tablet screens here */
-  #main {
-    margin-left: 270px; /* Example: Increase the margin for main content on tablets */
-  }
-
-  .portfolio .portfolio-item {
-    width: calc(50% - 20px); /* Example: Adjust portfolio item width for tablets */
-  }
-
-  .section-title h2 {
-    font-size: 32px; /* Example: Decrease the font size for section titles on tablets */
-  }
-
-  /* Add any other tablet-specific styles here */
-}
-
-/* For mobile screens */
-@media (max-width: 767px) {
-  /* Add your styles here for mobile screens */
-  #header {
-    width: 100%; /* Example: Make the header full width for mobiles */
-  }
-
-  /* Add other styles for mobile screens here */
-  #main {
-    margin-left: 0; /* Example: Remove the margin for main content on mobiles */
-  }
-
-  .portfolio .portfolio-item {
-    width: 100%; /* Example: Adjust portfolio item width for mobiles */
-  }
-
-  .section-title h2 {
-    font-size: 28px; /* Example: Decrease the font size for section titles on mobiles */
-  }
-
-  /* Add any other mobile-specific styles here */
 }
