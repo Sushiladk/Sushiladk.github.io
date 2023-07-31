@@ -227,8 +227,8 @@ h6 {
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
-  background-repeat: no-repeat; /* Prevent image from repeating */
-  background-attachment: fixed; /* Optional, keeps the background fixed while scrolling */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center top; /* Adjust the background image position */
 }
 
 #hero:before {
@@ -277,18 +277,18 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero {
-    /* Adjust the background size for mobile devices */
-    background-size: 100% auto;
-    /* Center the background image vertically */
-    background-position-y: center;
-  }
-
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
