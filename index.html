@@ -94,7 +94,7 @@
               When I'm not immersed in the world of physics, I love to travel and explore new places, play sports, and watch movies. I'm also passionate about learning programming, and 
               always eager to improve my skills in this area. In addition to my academic pursuits, I have a deep interest in world geography and history. I enjoy reading and learning about
                different cultures and traditions, and how they have shaped the world we live in today. On this website, you'll find information about my research, as well as my other interests and hobbies. 
-               Please feel free to get in touch if you have any questions. Thank you for visiting, and I look forward to connecting with you!
+               Please feel free to get in touch if you have any questions. Thank you for visiting!
 
               
             </p>
@@ -114,7 +114,7 @@
 
     <div class="section-title">
       <h2>My Reseach</h2>
-      <p>This section provides will provide you more information about my current research, past research and my future research aspirations.</p>
+      <p>This section will provide you more information about my current research, past research and my future research aspirations.</p>
     </div>
 
     <div class="row" data-aos="fade-up">
@@ -307,63 +307,80 @@
     
     
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="Life Logs" class="testimonials section-bg">
-      <div class="container">
+  #hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") top center;
+  background-size: cover;
+}
 
-        <div class="section-title">
-          <h2>Physic and Life Logs</h2>
-          <p>There is more to life  than physics and here you will find  a peek of my life, travels and my thoughts.</p>
-        </div>
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <img src="assets/img/testimonials/alishan.jpg" class="testimonial-img" alt="" width="300" height="300">
-                <h3>Alison Mountain</h3>
-                <h4> </h4>
-              </div>
-            </div>
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/img/testimonials/hehuan1.jpg" class="testimonial-img" alt="" width="300" height="300">
-                <h3>Hehuan Mountain</h3>
-                <h4></h4>
-              </div>
-            </div>
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/testimonials/lightning.JPG" class="testimonial-img" alt="" width="300" height="300">
-                <h3>Lightning</h3>
-                <h4></h4>
-              </div>
-            </div>
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <img src="assets/img/testimonials/illan.jpg" class="testimonial-img" alt="" width="300" height="300">
-                <h3>Pacific</h3>
-                <h4></h4>
-              </div>
-            </div>
+#hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <img src="assets/img/testimonials/nepal.jpg" class="testimonial-img" alt="" width="300" height="300">
-                <h3>Nepal</h3>
-                <h4></h4>
-              </div>
-            </div>
+@media (max-width: 768px) {
+  #hero {
+    /* Adjust the background size to "contain" instead of "cover" */
+    background-size: contain;
+    /* Center the background image vertically */
+    background-position-y: center;
+  }
 
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
 
-      </div>
-    </section>
+@media (min-width: 1024px) {
+  #hero {
+    /* Retain the original background attachment for larger screens */
+    background-attachment: fixed;
+  }
+
+  /* Retain the original styles for h2 on larger screens */
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
