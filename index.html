@@ -248,7 +248,7 @@
         </div>
   <!-- End Skills Section -->
 
-  <!-- ======= Resume Section ======= -->
+ <!-- ======= Resume Section ======= -->
 <section id="resume" class="resume">
     <div class="container">
 
@@ -256,22 +256,40 @@
             <h2>My Resume</h2>
         </div>
 
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <!-- Embedding a PDF viewer for your CV -->
-                <object data="assets/img/Sushil_cv.pdf" type="application/pdf" width="100%" height="500px">
-                    <p>It seems you don't have a PDF plugin for this browser. No worries, you can <a href="assets/img/Sushil_cv.pdf" download="Sushil_cv">click here to download the PDF file.</a></p>
-                </object>
-            </div>
-        </div>
-
         <div class="text-center mt-3">
-            <a href="assets/img/Sushil_cv.pdf" download="Sushil_cv" class="btn btn-primary">
-                <i class="bi bi-file-earmark-arrow-down"></i> Download Full CV
+            <!-- Button to trigger the modal -->
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#resumeModal">
+                <i class="bi bi-file-earmark-text"></i> View CV
+            </button>
+
+            <a href="assets/img/Sushil_cv.pdf" download="Sushil_cv" class="btn btn-primary ml-3">
+                <i class="bi bi-file-earmark-arrow-down"></i> Download CV
             </a>
         </div>
 
     </div>
+
+    <!-- Resume Modal -->
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resumeModalLabel">My Resume</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Embedding a PDF viewer for your CV -->
+                    <object data="assets/img/Sushil_cv.pdf" type="application/pdf" width="100%" height="500px">
+                        <p>It seems you don't have a PDF plugin for this browser. No worries, you can <a href="assets/img/Sushil_cv.pdf" download="Sushil_cv">click here to download the PDF file.</a></p>
+                    </object>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Resume Modal -->
+
 </section>
 <!-- End Resume Section -->
 
