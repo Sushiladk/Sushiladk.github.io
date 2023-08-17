@@ -85,9 +85,9 @@ h6 {
 #header .profile img {
   margin: 20px auto;  /* Slightly increased margin for spacing */
   display: block;
-  width: 150px;       /* Increased width */
+  width: 175px;       /* Increased width */
   border: 8px solid #2c2f3f;
-  border-radius: 50%; /* Ensuring it's a circle */
+  border-radius: 75%; /* Ensuring it's a circle */
 }
 
 
